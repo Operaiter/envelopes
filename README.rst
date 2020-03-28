@@ -47,6 +47,7 @@ Envelopes allows you to easily:
 * Attach files of any kind without hassle.
 * Use any charset natively supported by Python's *unicode* type in addresses,
   bodies, headers and attachment file names.
+* Set non-spam headers automatically
 
 Project status
 --------------

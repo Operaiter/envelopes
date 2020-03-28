@@ -49,6 +49,8 @@ from email.mime.application import MIMEApplication
 from email.mime.audio import MIMEAudio
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
+from email.utils import formatdate
+from email.utils import make_msgid
 import mimetypes
 import os
 import re
@@ -129,7 +131,7 @@ class Envelope(object):
         if headers:
             self._headers = headers
         else:
-            self._headers = {}
+            self._headers = {'Date': formatdate(localtime=True), 'Message-Id': make_msgid()}
 
         self._charset = charset
 
